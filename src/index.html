@@ -1,0 +1,67 @@
+<div id="game-container">
+    <div class="header">
+        <h1 id="game-title">Kalambury</h1>
+        <button id="back" class="hidden">Powrót</button>
+    </div>
+    <span id="timer" class="hidden"></span>
+    <div id="navigation">
+        <ul class="flex online-offline">
+            <li id="online">Hasła Online</li>
+            <li id="offline" class="selected">Hasła Offline</li>
+        </ul>
+        <ul class="flex">
+            <li class="lang" data-language="en">ENG</li>
+            <li class="lang selected" data-language="pl">PL</li>
+            <li class="lang" data-language="de">DE</li>
+        </ul>
+        <button id="start-game">graj</button>
+        <button id="add-new-word">dodaj nowe hasło</button>
+    </div>
+    <div id="new-words-box" class="flex-box hidden">
+        <div class="sub-flex">
+            <h2 id="sel-lang">select language</h2>
+            <ul>
+                <li class="lang" data-language="en">ENG</li>
+                <li class="lang" data-language="pl">PL</li>
+                <li class="lang" data-language="de">DE</li>
+            </ul>
+        </div>
+        <div class="sub-flex hidden" id="cats-box">
+            <h2 id="sel-cat">select category</h2>
+            <ul id="cats"></ul>
+        </div>
+        <div class="sub-flex hidden" id="word-box">
+            <h2 id="write-word">write word</h2>
+            <input class="input-des" type="text" id="name" placeholder="WRITE WORD">
+            <button id="save-new-word">save word</button>
+        </div>
+    </div>
+    <div class="timer-options hidden">
+        <h2 id="time-title">Wybierz czas na pokazanie</h2>
+        <div class="select-time">
+            <button class="time-btn" data-time="1">1 min</button>
+            <button class="time-btn" data-time="2">2 min</button>
+        </div>
+        <h2 id="own-time-title">Zdefiniuj własny czas</h2>
+        <div class="own-time-box">
+            <input class="input-des" id="custome-time" type="tel" placeholder="OD 3 DO 20 MIN">
+            <button id="save-time">zapisz własny czas</button>
+        </div>
+    </div>
+    <div class="flex-box hidden" id="cards-box">
+        <div class="sub-flex">
+            <h2 id="cat-title">kategoria</h2>
+            <h3 id="generated-category">naciśnij "wylosuj kategorie"</h3>
+        </div>
+        <div id="word" class="sub-flex hidden">
+            <h2 id="word-title">Hasło</h2>
+            <h3 id="generated-word">naciśnij "Wylosuj Hasło"</h3>
+        </div>
+        <button id="get-category">Wylosuj kategorie</button>
+        <button id="get-word" class="hidden">Wylosuj hasło</button>
+        <button id="next" class="hidden">Następny</button>
+    </div>
+</div>
+<div id="footer">
+    <a href="https://github.com/Nienormalny" target="blank">&copy; Nienormalny 2019</a>
+</div>

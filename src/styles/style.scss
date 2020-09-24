@@ -1,0 +1,231 @@
+@import './colors.scss';
+
+* {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $body-background;
+    width: 100vw;
+    height: 100vh;
+}
+#app {
+    width: 414px;
+    height: 698px;
+    background: $app-background;
+    border-radius: 10px;
+    box-shadow: 3px 3px 45px 1px black;
+    overflow: hidden;
+    position: relative;
+    #game-container {
+        display: block;
+        height: calc(100% - 40px);
+    }
+}
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    padding: 5px 0;
+    background-color: $footer-background;
+    position: absolute;
+    bottom: 0;
+    a {
+        color: $light-font-color;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $hover-font-color;
+        }
+    }
+}
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h2 {
+    margin-bottom: 10px;
+}
+h3 {
+    margin-top: 0;
+    font-size: 1em;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+button,
+ul > li {
+    background-color: $button-bg-color;
+    border: 0;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: auto 0 10px 0;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    &.selected {
+        background-color: $green;
+    }
+}
+#setup-title {
+    margin-top: auto;
+}
+#generated-category,
+#generated-word {
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    background-color: $orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 80%;
+    margin: auto;
+}
+#back {
+    background-color: $red;
+}
+.flex-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100% - 135px);
+}
+.sub-flex {
+    margin-top: auto;
+    &#word {
+        margin-top: 10px;
+    }
+}
+.hidden {
+    display: none !important;
+}
+#timer {
+    display: block;
+    margin: 0 auto;
+    font-size: 2em;
+    padding: 10px;
+    background-color: $timer;
+    color: white;
+    text-align: center;
+    width: 90px;
+    border-radius: 5px;
+}
+.input-des {
+    border: 2px solid $button-bg-color;
+    border-radius: 5px;
+    padding: 8px 15px;
+    text-align: center;
+    outline: none;
+}
+.select-time {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: $dark-gray;
+    button {
+        margin: 10px !important;
+    }
+}
+.own-time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    input, button {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
+.timer-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: calc(100% - 135px);
+    align-content: center;
+    h2 {
+        width: 100%;
+        margin-top: 35px;
+    }
+    button {
+        margin-bottom: unset;
+    }
+}
+.game-started {
+    .sub-flex {
+        margin-top: 0;
+    }
+}
+#navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 80px);
+    button {
+        margin: 10px;
+        width: 250px;
+        font-size: 1.5em;
+        &#start-game {
+            background-color: $green;
+        }
+        &#add-new-word {
+            background-color: $orange;
+        }
+    }
+}
+#new-words-box {
+    .sub-flex {
+        margin-top: unset;
+        h2 {
+            margin-top: 15px;
+            font-size: 1em;
+        }
+    }
+}
+ul > li {
+    font-size: 14px;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li {
+        margin: 5px;
+        width: 50px;
+        transform: all 0.3s ease;
+        &.selected {
+            font-size: 18px;
+        }
+    }
+}
+.online-offline {
+    li {
+        width: auto;
+    }
+}
+.header {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    button {
+        margin: 0 0 0 auto;
+    }
+}
